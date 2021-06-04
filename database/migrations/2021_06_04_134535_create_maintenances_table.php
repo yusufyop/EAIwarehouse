@@ -14,8 +14,14 @@ class CreateMaintenancesTable extends Migration
     public function up()
     {
         Schema::create('maintenances', function (Blueprint $table) {
-            $table->id();
+            $table->BigIncrements('maintenance_id');
+            $table->unsignedBigInteger('warehouse_id');
+            $table->integer('product_id');
+            $table->integer('quantity_exp');
+            $table->string('date');
             $table->timestamps();
+
+            $table->foreign('warehouse_id')->references('warehouse_id')->on('warehouses');
         });
     }
 
