@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-
-
 });
+
+
+Route::get('/inbound', 'App\Http\Controllers\InboundController@index');
+Route::post('/inbound', 'App\Http\Controllers\InboundController@create');
+Route::put('/inbound/{id_inbound}', 'App\Http\Controllers\InboundController@update');
+Route::delete('/inbound/{id_inbound}', 'App\Http\Controllers\InboundController@delete');
+

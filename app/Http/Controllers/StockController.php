@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class operational extends Controller
+class StockController extends Controller
 {
     //
 }
