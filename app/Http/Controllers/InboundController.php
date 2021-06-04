@@ -26,10 +26,13 @@ class InboundController extends Controller
     public function create(request $request)
     {
         $inbound = new Inbound;
-        $inbound->nama_barang = $request->nama_barang;
-        $inbound->jenis_barang = $request->jenis_barang;
-        $inbound->jumlah_barang = $request->jumlah_barang;
-        $inbound->tanggal_masuk = $request->tanggal_masuk;
+        $warehouse = Warehouse::join('warehouses','warehouse.id', '=','inbounds.warehouse_id')->
+        select('warehouses.warehouse_id')->
+        where('inbounds.warehouse_id', '=', $warehouse_id)->get();
+        $inbound->delivery_id = $request->delivery_id;
+        $inbound->product_id = $request->product_id;
+        $inbound->in_date = $request->in_date;
+        $inbound->quantity_in = $request->quantity_in;
         $inbound->save();
 
             return "Data Berhasil Masuk";
@@ -76,9 +79,9 @@ class InboundController extends Controller
      * @param  \App\Models\Inbound  $inbound
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id_inbound)
+    public function update(Request $request, $inbound_id)
     {
-        $inbound = Inbound::findOrFail($id_inbound);
+        $inbound = Inbound::findOrFail($inbound_id);
         $inbound->update($request->all());
 
         return "Data Berhasil di Update";
@@ -90,9 +93,9 @@ class InboundController extends Controller
      * @param  \App\Models\Inbound  $inbound
      * @return \Illuminate\Http\Response
      */
-    public function delete($id_inbound)
+    public function delete($inbound_id)
     {
-        $inbound = Inbound::find($id_inbound);
+        $inbound = Inbound::find($inbound_id);
         $inbound->delete();
 
         return "Data Berhasil di Hapus";
