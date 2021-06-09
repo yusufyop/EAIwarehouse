@@ -16,7 +16,7 @@ class WarehouseController extends Controller
 
     public function create(request $request)
     {
-        $Warehouse = new Warehouse;
+        $warehouse = new Warehouse;
         $warehouse->location = $request->location;
         $warehouse->capacity = $request->capacity;
         $warehouse->save();
