@@ -29,20 +29,6 @@ class OutboundController extends Controller
         return "Data Berhasil Masuk";
     }
 
-   
-    public function store(Request $request)
-    {
-
-    }
-
-    public function show(Outbound $outbound)
-    {
-    }
-
-    public function edit(Outbound $outbound)
-    {
-    }
-
     
     public function update(Request $request, $id_outbound)
     {
