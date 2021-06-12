@@ -16,26 +16,26 @@ class OperationalController extends Controller
 
     public function create(request $request)
     {
-        // $Operational = new Operational;
-        // $Operational->quantity_exp = $request->quantity_exp;
-        // $Operational->date = $request->date;
-        // $Operational->save();
+        $operational = new Operational;
+        $operational->quantity_exp = $request->quantity_exp;
+        $operational->date = $request->date;
+        $operational->save();
 
-        // return "Data Berhasil Masuk";
+        return "Data Berhasil Masuk";
     }
 
     public function update(Request $request, $id_Operational)
     {
-        // $Operational = Operational::findOrFail($id_Operational);
-        // $Operational->update($request->all());
+        $operational = Operational::findOrFail($id_Operational);
+        $operational->update($request->all());
 
-        // return "Data Berhasil di Update";
+        return "Data Berhasil di Update";
     }
 
     public function delete($id_Operational)
     {
-        $Operational = Operational::find($id_Operational);
-        $Operational->delete();
+        $operational = Operational::find($id_Operational);
+        $operational->delete();
 
         return "Data Berhasil di Hapus";
     }

@@ -23,7 +23,7 @@ class CreateOutboundsTable extends Migration
             $table->integer('quantity_out');
             $table->timestamps();
 
-            $table->foreign('warehouse_id')->references('warehouse_id')->on('warehouses');
+           
         });
     }
 

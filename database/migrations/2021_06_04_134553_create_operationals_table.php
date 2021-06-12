@@ -22,9 +22,6 @@ class CreateOperationalsTable extends Migration
             $table->string('date');
             $table->timestamps();
 
-            $table->foreign('maintenance_id')->references('maintenance_id')->on('maintenances');
-            $table->foreign('inbound_id')->references('inbound_id')->on('inbounds');
-            $table->foreign('outbound_id')->references('outbound_id')->on('outbounds');
         });
     }
 

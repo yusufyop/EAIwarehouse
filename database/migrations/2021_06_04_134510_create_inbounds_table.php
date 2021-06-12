@@ -14,15 +14,13 @@ class CreateInboundsTable extends Migration
     public function up()
     {
         Schema::create('inbounds', function (Blueprint $table) {
-            $table->BigIncrements('inbound_id');
-            $table->unsignedBigInteger('warehouse_id');
+            $table->Increments('inbound_id');
+            $table->Integer('warehouse_id');
             $table->integer('delivery_id');
             $table->integer('product_id');
             $table->string('in_date');
             $table->integer('quantity_in');
             $table->timestamps();
-
-            $table->foreign('warehouse_id')->references('warehouse_id')->on('warehouses');
         });
     }
 

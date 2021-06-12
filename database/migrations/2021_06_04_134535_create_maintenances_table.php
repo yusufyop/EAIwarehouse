@@ -21,7 +21,6 @@ class CreateMaintenancesTable extends Migration
             $table->string('date');
             $table->timestamps();
 
-            $table->foreign('warehouse_id')->references('warehouse_id')->on('warehouses');
         });
     }
 

@@ -16,7 +16,7 @@ class InboundController extends Controller
     public function create(request $request)
     {
         $inbound = new Inbound;
-        $warehouse = Warehouse::join('warehouses', 'warehouse.id', '=', 'inbounds.warehouse_id')->select('warehouses.warehouse_id')->where('inbounds.warehouse_id', '=', $warehouse_id)->get();
+        $inbound->warehouse_id = $request->warehouse_id;
         $inbound->delivery_id = $request->delivery_id;
         $inbound->product_id = $request->product_id;
         $inbound->in_date = $request->in_date;
