@@ -14,10 +14,10 @@ class CreateOperationalsTable extends Migration
     public function up()
     {
         Schema::create('operationals', function (Blueprint $table) {
-            $table->BigIncrements('operational_id');
-            $table->unsignedBigInteger('maintenance_id');
-            $table->unsignedBigInteger('inbound_id');
-            $table->unsignedBigInteger('outbound_id');
+            $table->increments('id');
+            $table->integer('maintenance_id');
+            $table->integer('inbound_id');
+            $table->integer('outbound_id');
             $table->integer('expense_id');
             $table->string('date');
             $table->timestamps();

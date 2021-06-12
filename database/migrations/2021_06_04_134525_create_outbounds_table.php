@@ -14,8 +14,8 @@ class CreateOutboundsTable extends Migration
     public function up()
     {
         Schema::create('outbounds', function (Blueprint $table) {
-            $table->BigIncrements('outbound_id');
-            $table->unsignedBigInteger('warehouse_id');
+            $table->Increments('id');
+            $table->Integer('warehouse_id');
             $table->integer('vehicle_id');
             $table->integer('product_id');
             $table->string('out_date');
@@ -23,7 +23,7 @@ class CreateOutboundsTable extends Migration
             $table->integer('quantity_out');
             $table->timestamps();
 
-           
+
         });
     }
 

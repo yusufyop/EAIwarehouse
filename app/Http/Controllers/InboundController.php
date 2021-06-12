@@ -26,18 +26,18 @@ class InboundController extends Controller
         return "Data Berhasil Masuk";
     }
 
-    public function update(Request $request, $inbound_id)
+    public function update(Request $request, $id_inbound)
     {
-        $inbound = Inbound::findOrFail($inbound_id);
+        $inbound = Inbound::findOrFail($id_inbound);
         $inbound->update($request->all());
 
         return "Data Berhasil di Update";
     }
 
 
-    public function delete($inbound_id)
+    public function delete($id_inbound)
     {
-        $inbound = Inbound::find($inbound_id);
+        $inbound = Inbound::find($id_inbound);
         $inbound->delete();
 
         return "Data Berhasil di Hapus";

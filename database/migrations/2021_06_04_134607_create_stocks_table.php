@@ -14,13 +14,13 @@ class CreateStocksTable extends Migration
     public function up()
     {
         Schema::create('stocks', function (Blueprint $table) {
-            $table->BigIncrements('stock_id');
+            $table->increments('id');
             $table->integer('product_id');
-            $table->unsignedBigInteger('warehouse_id');
+            $table->integer('warehouse_id');
             $table->integer('quantity_product');
             $table->timestamps();
 
-          
+
 
         });
     }

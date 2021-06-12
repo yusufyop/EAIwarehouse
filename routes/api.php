@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/inbound', 'App\Http\Controllers\InboundController@index');
 Route::post('/inbound', 'App\Http\Controllers\InboundController@create');
-Route::put('/inbound/{inbound_id}', 'App\Http\Controllers\InboundController@update');
-Route::delete('/inbound/{inbound_id}', 'App\Http\Controllers\InboundController@delete');
+Route::put('/inbound/{id}', 'App\Http\Controllers\InboundController@update');
+Route::delete('/inbound/{id}', 'App\Http\Controllers\InboundController@delete');
 
 Route::get('/outbound', 'App\Http\Controllers\OutboundController@index');
 Route::post('/outbound', 'App\Http\Controllers\OutboundController@create');

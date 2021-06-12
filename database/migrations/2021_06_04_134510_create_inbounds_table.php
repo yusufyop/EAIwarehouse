@@ -14,7 +14,7 @@ class CreateInboundsTable extends Migration
     public function up()
     {
         Schema::create('inbounds', function (Blueprint $table) {
-            $table->Increments('inbound_id');
+            $table->Increments('id');
             $table->Integer('warehouse_id');
             $table->integer('delivery_id');
             $table->integer('product_id');
