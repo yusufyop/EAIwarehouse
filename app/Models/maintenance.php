@@ -9,4 +9,5 @@ class maintenance extends Model
 {
     use HasFactory;
     protected $table = "maintenances";
+    protected $fillable = ['warehouse_id','product_id','date','quantity_exp'];
 }
