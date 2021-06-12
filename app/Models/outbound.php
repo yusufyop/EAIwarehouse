@@ -9,4 +9,5 @@ class outbound extends Model
 {
     use HasFactory;
     protected $table = "outbounds";
+    protected $fillable = ['warehouse_id','vehicle_id','product_id','out_date','address','quantity_out'];
 }

@@ -26,25 +26,25 @@ Route::delete('/inbound/{id}', 'App\Http\Controllers\InboundController@delete');
 
 Route::get('/outbound', 'App\Http\Controllers\OutboundController@index');
 Route::post('/outbound', 'App\Http\Controllers\OutboundController@create');
-Route::put('/outbound/{outbound_id}', 'App\Http\Controllers\OutboundController@update');
-Route::delete('/outbound/{outbound_id}', 'App\Http\Controllers\OutboundController@delete');
+Route::put('/outbound/{id}', 'App\Http\Controllers\OutboundController@update');
+Route::delete('/outbound/{id}', 'App\Http\Controllers\OutboundController@delete');
 
 Route::get('/maintenance', 'App\Http\Controllers\MaintenanceController@index');
 Route::post('/maintenance', 'App\Http\Controllers\MaintenanceController@create');
-Route::put('/maintenance/{maintenance_id}', 'App\Http\Controllers\MaintenanceController@update');
-Route::delete('/maintenance/{maintenance_id}', 'App\Http\Controllers\MaintenanceController@delete');
+Route::put('/maintenance/{id}', 'App\Http\Controllers\MaintenanceController@update');
+Route::delete('/maintenance/{id}', 'App\Http\Controllers\MaintenanceController@delete');
 
 Route::get('/stock', 'App\Http\Controllers\StockController@index');
 Route::post('/stock', 'App\Http\Controllers\StockController@create');
-Route::put('/stock/{stock_id}', 'App\Http\Controllers\StockController@update');
-Route::delete('/stock/{stock_id}', 'App\Http\Controllers\StockController@delete');
+Route::put('/stock/{id}', 'App\Http\Controllers\StockController@update');
+Route::delete('/stock/{id}', 'App\Http\Controllers\StockController@delete');
 
 Route::get('/warehouse', 'App\Http\Controllers\WarehouseController@index');
 Route::post('/warehouse', 'App\Http\Controllers\WarehouseController@create');
-Route::put('/warehouse/{warehouse_id}', 'App\Http\Controllers\WarehouseController@update');
-Route::delete('/warehouse/{warehouse_id}', 'App\Http\Controllers\WarehouseController@delete');
+Route::put('/warehouse/{id}', 'App\Http\Controllers\WarehouseController@update');
+Route::delete('/warehouse/{id}', 'App\Http\Controllers\WarehouseController@delete');
 
 Route::get('/operational', 'App\Http\Controllers\OperationalController@index');
 Route::post('/operational', 'App\Http\Controllers\OperationalController@create');
-Route::put('/operational/{operational_id}', 'App\Http\Controllers\OperationalController@update');
-Route::delete('/operational/{operational_id}', 'App\Http\Controllers\OperationalController@delete');
+Route::put('/operational/{id}', 'App\Http\Controllers\OperationalController@update');
+Route::delete('/operational/{id}', 'App\Http\Controllers\OperationalController@delete');
